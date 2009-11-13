@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.6-4
-Date: 2009-11-11
+Version: 0.6-5
+Date: 2009-11-13
 Author: Michael Friendly, with contributions by Stephane Dray, Hadley
         Wickham
 Maintainer: Michael Friendly <friendly@yorku.ca>
@@ -19,6 +19,6 @@ LazyLoad: yes
 LazyData: yes
 Repository: CRAN
 Repository/R-Forge/Project: histdata
-Repository/R-Forge/Revision: 16
-Date/Publication: 2009-11-13 14:58:29
-Packaged: 2009-11-11 21:05:41 UTC; rforge
+Repository/R-Forge/Revision: 20
+Date/Publication: 2009-11-22 16:11:09
+Packaged: 2009-11-16 21:08:45 UTC; rforge
