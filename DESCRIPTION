@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.6-12
-Date: 2011-10-12
+Version: 0.6-13
+Date: 2011-11-03
 Authors@R: c(person(given = "Michael", family = "Friendly",
         role=c("aut", "cre"), email="friendly@yorku.ca"), person(given
         = "Stephane", family = "Dray", role="ctb"), person(given =
@@ -14,7 +14,7 @@ Author: Michael Friendly, with contributions by Stephane Dray, Hadley
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data
         sets that are interesting and important in the history of
-        statistics and data visualization. The goal of the package is
+        statistics and data visualization.  The goal of the package is
         to make these available, both for instructional use and for
         historical research.  Some of these present interesting
         challenges for graphics or analysis in R.
@@ -25,7 +25,11 @@ LazyLoad: yes
 LazyData: yes
 Repository: CRAN
 Repository/R-Forge/Project: histdata
-Repository/R-Forge/Revision: 53
-Date/Publication: 2011-10-26 18:09:33
-Packaged: 2011-10-25 12:05:04 UTC; rforge
+Repository/R-Forge/Revision: 58
+Repository/R-Forge/DateTimeStamp: 2012-10-05 14:08:28
+Date/Publication: 2012-10-06 06:12:00
+Packaged: 2012-10-05 18:21:53 UTC; rforge
 Depends: R (>= 2.10)
+X-CRAN-Comment: This package has been archived: it had check WARNINGs
+        after a ggplot2 update. These WARNINGs were not fixed even
+        after a reminders.
