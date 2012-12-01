@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.6-13
-Date: 2011-11-03
+Version: 0.6-14
+Date: 2012-12-01
 Authors@R: c(person(given = "Michael", family = "Friendly",
         role=c("aut", "cre"), email="friendly@yorku.ca"), person(given
         = "Stephane", family = "Dray", role="ctb"), person(given =
@@ -25,11 +25,8 @@ LazyLoad: yes
 LazyData: yes
 Repository: CRAN
 Repository/R-Forge/Project: histdata
-Repository/R-Forge/Revision: 58
-Repository/R-Forge/DateTimeStamp: 2012-10-05 14:08:28
-Date/Publication: 2012-10-06 06:12:00
-Packaged: 2012-10-05 18:21:53 UTC; rforge
+Repository/R-Forge/Revision: 62
+Repository/R-Forge/DateTimeStamp: 2012-12-03 18:39:43
+Date/Publication: 2012-12-04 07:16:52
+Packaged: 2012-12-03 19:15:27 UTC; rforge
 Depends: R (>= 2.10)
-X-CRAN-Comment: This package has been archived: it had check WARNINGs
-        after a ggplot2 update. These WARNINGs were not fixed even
-        after a reminders.
