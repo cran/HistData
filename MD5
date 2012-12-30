@@ -1,6 +1,6 @@
-146b83abbb2859bc7b8525d2c7c8c6ec *DESCRIPTION
+03743484e0b7539d1326ed4f5992b85b *DESCRIPTION
 e494219b4fff2477865c1ce1b94426a2 *NAMESPACE
-02291fac947c8115e27262aaa24d1c4d *NEWS
+18f50f92935bb33740bb7c64c843822f *NEWS
 0d8e3a0cf8732140a354c97a81e1a356 *data/Arbuthnot.RData
 3b771cb0bcd3f40b28ee5cf0c5e2b376 *data/Bowley.RData
 f07825dc1a1409a76a8d1903e7300868 *data/Cavendish.RData
@@ -50,10 +50,10 @@ ded00744ba5431eea16632468ebfe5c8 *man/ChestSizes.Rd
 9105fef08173f3ee60a95531ddb386c4 *man/Fingerprints.Rd
 fbfd158c64d5f1e25f7235f6cc05c421 *man/Galton.Rd
 63ec4ad6aebf4f78d4340e0853a30b84 *man/GaltonFamilies.Rd
-4eca5dda20ec739e615d86e33ce04bae *man/Guerry.Rd
-c44d821b9cf23b9930bfce04793c73d7 *man/HistData-package.Rd
+d0cdaa8ad66eeb1c78c95167630edb0b *man/Guerry.Rd
+9b265ade710311b087faf7d5c5da7299 *man/HistData-package.Rd
 2fcabfbcfe8ba9f4480a53c079660223 *man/Jevons.Rd
-ddccc7b11315779ebbb4edb661cf9660 *man/Langren.Rd
+2d8613fba3f29085d661aaeb1b35a208 *man/Langren.Rd
 e22fce06faf1feb07ca2fc9fbcebccc8 *man/Macdonell.Rd
 547d282e3a080285f22df2cc6a3feb21 *man/Michelson.Rd
 63a9b9e9507775e43493b7a147f4d638 *man/Minard.Rd
