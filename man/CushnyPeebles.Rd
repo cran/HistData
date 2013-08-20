@@ -1,9 +1,9 @@
-\name{CushnyPebbles}
-\alias{CushnyPebbles}
-\alias{CushnyPebblesN}
+\name{CushnyPeebles}
+\alias{CushnyPeebles}
+\alias{CushnyPeeblesN}
 \docType{data}
 \title{
-Cushny-Pebbles Data: Soporific Effects of Scopolamine Derivatives
+Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives
 }
 \description{
 Cushny and Peebles (1905) studied the effects of hydrobromides
@@ -31,15 +31,15 @@ and consequently came to wrong conclusions.
 But as well, the sample sizes (number of nights) for each mean differed widely,
 ranging from 3-9, and this was not taken into account in their analyses.
 To allow weighted analyses, the number of observations for each mean
-is contained in the data frame \code{CushnyPebblesN}.
+is contained in the data frame \code{CushnyPeeblesN}.
 
 }
 \usage{
-data(CushnyPebbles)
-data(CushnyPebblesN)
+data(CushnyPeebles)
+data(CushnyPeeblesN)
 	}
 \format{
-  \code{CushnyPebbles}: A data frame with 11 observations on the following 4 variables.
+  \code{CushnyPeebles}: A data frame with 11 observations on the following 4 variables.
   \describe{
     \item{\code{Control}}{a numeric vector: mean hours of sleep}
     \item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep}
@@ -47,7 +47,7 @@ data(CushnyPebblesN)
     \item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep}
   }
 
-  \code{CushnyPebblesN}:   A data frame with 11 observations on the following 4 variables.
+  \code{CushnyPeeblesN}:   A data frame with 11 observations on the following 4 variables.
   \describe{
     \item{\code{Control}}{a numeric vector: number of observations}
     \item{\code{L_hyoscyamine}}{a numeric vector: number of observations}
@@ -64,7 +64,7 @@ in analyses or other versions of this data set.
 Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical Isomers. II:
 Hyoscines," \emph{Journal of Physiology}, 32, 501-510.
 
-Senn, Stephen, Data from Cushny and Pebbles, \url{http://www.senns.demon.co.uk/Data/Cushny.xls}
+Senn, Stephen, Data from Cushny and Peebles, \url{http://www.senns.demon.co.uk/Data/Cushny.xls}
 }
 \references{
 
@@ -81,19 +81,19 @@ Senn, S.J. and Richardson, W. (1994), "The first t-test", \emph{Statistics in Me
 }
 
 \examples{
-data(CushnyPebbles)
+data(CushnyPeebles)
 # quick looks at the data
-plot(CushnyPebbles)
-boxplot(CushnyPebbles, ylab="Hours of Sleep", xlab="Treatment")
+plot(CushnyPeebles)
+boxplot(CushnyPeebles, ylab="Hours of Sleep", xlab="Treatment")
 
 ##########################
 # Repeated measures MANOVA
 require(car)
 
-CPmod <- lm(cbind(Control, L_hyoscyamine, L_hyoscine, DL_hyoscine) ~ 1, data=CushnyPebbles)
+CPmod <- lm(cbind(Control, L_hyoscyamine, L_hyoscine, DL_hyoscine) ~ 1, data=CushnyPeebles)
 
 # Assign within-S factor and contrasts
-Treatment <- factor(colnames(CushnyPebbles), levels=colnames(CushnyPebbles))
+Treatment <- factor(colnames(CushnyPeebles), levels=colnames(CushnyPeebles))
 contrasts(Treatment) <- matrix(
 	c(-3, 1, 1, 1,
 	   0,-2, 1, 1,
@@ -113,9 +113,9 @@ if (require(heplots)) {
 ################################
 # reshape to long format, add Ns
 
-CPlong <- stack(CushnyPebbles)[,2:1]
+CPlong <- stack(CushnyPeebles)[,2:1]
 colnames(CPlong) <- c("treatment", "sleep")
-CPN <- stack(CushnyPebblesN)
+CPN <- stack(CushnyPeeblesN)
 CPlong <- data.frame(patient=rep(1:11,4), CPlong, n=CPN$values)
 str(CPlong)
 
