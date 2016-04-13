@@ -1,13 +1,14 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.7-6
-Date: 2015-10-13
+Version: 0.7-8
+Date: 2016-04-13
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
             person(given = "James", family = "Hanley", role="ctb"),
-            person(given = "Dennis", family = "Murphy", role="ctb")
+            person(given = "Dennis", family = "Murphy", role="ctb"),
+            person(given = "Peter", family = "Li", role="ctb")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
@@ -16,20 +17,22 @@ Description: The HistData package provides a collection of small data sets
     and for historical research.  Some of these present interesting challenges for graphics
     or analysis in R.
 Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape,
-        plyr, lattice, jpeg, car, gplots, sp, heplots
+        plyr, lattice, jpeg, car, gplots, sp, heplots, knitr, rmarkdown
 License: GPL
 LazyLoad: yes
 LazyData: yes
+VignetteBuilder: knitr
 Author: Michael Friendly [aut, cre],
   Stephane Dray [ctb],
   Hadley Wickham [ctb],
   James Hanley [ctb],
-  Dennis Murphy [ctb]
+  Dennis Murphy [ctb],
+  Peter Li [ctb]
 Repository: CRAN
 Repository/R-Forge/Project: histdata
-Repository/R-Forge/Revision: 77
-Repository/R-Forge/DateTimeStamp: 2015-10-16 01:45:37
-Date/Publication: 2015-10-16 17:29:20
+Repository/R-Forge/Revision: 88
+Repository/R-Forge/DateTimeStamp: 2016-04-13 12:51:46
+Date/Publication: 2016-04-13 17:59:14
 NeedsCompilation: no
-Packaged: 2015-10-16 02:25:24 UTC; rforge
+Packaged: 2016-04-13 13:05:47 UTC; rforge
 Depends: R (>= 2.10)

@@ -1,3 +1,12 @@
+Version 0.7-8 (2016-04-13)
+
+  Fix web links again
+  
+Version 0.7-7 (2016-04-09)
+
+  Added vignettes/Snow_deaths and data/Snow.deaths2 [Thx: Peter Li]
+  Fixed web links to make curl happy
+
 Version 0.7-6 (2015-10-13)
 
   Added Armada data
