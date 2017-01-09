@@ -1,6 +1,7 @@
-dccc3caac08dc54562b2ea3b9948b592 *DESCRIPTION
-e494219b4fff2477865c1ce1b94426a2 *NAMESPACE
-45330058e167101dd913e1b35c12526d *NEWS
+a482b3caf2c563949aab7a3f024866eb *DESCRIPTION
+9d49d99fb99888cdb7e57fda2e9cb80c *NAMESPACE
+d614cdf04fba87a50a40e5e90417d4c6 *NEWS
+efe59516cb9869889e7293d4d068ebd3 *R/SnowMap.R
 c5de1baaf3112c6fce56927621a6cebb *build/vignette.rds
 ae32f71189c25fefd55b8c682e42f68c *data/Arbuthnot.RData
 cae330c4d8f3337e47f2811b1261b3cb *data/Armada.RData
@@ -37,8 +38,8 @@ d59678d4546b1dadf2d8e32b3f5a18d6 *data/PolioTrials.RData
 3223494837d539e753bc2d2cac24018f *data/Snow.dates.RData
 b9ce28fa77643c76ba44d6618b193516 *data/Snow.deaths.RData
 639aa25c30100962468594d2ca90c062 *data/Snow.deaths2.RData
-f53f30a34edf49d8b6e1654c2bcc4009 *data/Snow.polygons.RData
-8f57f4d59b1230b64d4dfac4fcb8d90b *data/Snow.pumps.RData
+1d3881a3101d56b0a0e3081cc176b5d1 *data/Snow.polygons.RData
+27714202bf62171b2317d5f5748b973c *data/Snow.pumps.RData
 b8a54b2247d50a40d63a8da02721711d *data/Snow.streets.RData
 d2e5ad9075cb1c32c1bcda15ca16c9e4 *data/Wheat.RData
 9cb8023e7c90991f01d7210ab7983d8c *data/Wheat.monarchs.RData
@@ -46,7 +47,7 @@ d2e5ad9075cb1c32c1bcda15ca16c9e4 *data/Wheat.RData
 83ed1a61050f3a2a4a98afa910f3b209 *data/YeastD.mat.RData
 89de612b2566d9f5fd728360e277681d *data/ZeaMays.RData
 05bbd845ddf5b8e678d1309cc3ef9495 *inst/doc/Snow_deaths-duplicates.Rmd
-ff007894ff728a7c378fc4ede786fa1a *inst/doc/Snow_deaths-duplicates.html
+0407aaaab3e6760cb029668e1ef3ffdf *inst/doc/Snow_deaths-duplicates.html
 0b670a2ed7c5b0fadc93d1ec69e2b092 *inst/images/google-toledo-rome3.jpg
 bfe0cc3eedc3068e8eb9b38c80f2351b *man/Arbuthnot.Rd
 f387119f713b8f1cc730cb2bacfaf876 *man/Armada.Rd
@@ -75,7 +76,8 @@ d668ec79b7927dc85168d0ea2d544c50 *man/PearsonLee.Rd
 b964d18e070d025aec126500eb9e2009 *man/Prostitutes.Rd
 6d1619b7b67c382db7b23f03163fa0f2 *man/Pyx.Rd
 93002140ea0ecab6a233588e165873e8 *man/Quarrels.Rd
-6ea8dafb6cf3b5d9c5c42b0ca79269e7 *man/Snow.Rd
+fd36111c20d78f529da2de6045def213 *man/Snow.Rd
+a2ed85e513dfcf5e261615919ea329b7 *man/SnowMap.Rd
 8e27ee9a771a1fc1684e41fe89a73015 *man/Wheat.Rd
 fbcaa81e8a8908955cace5fc06d9aaa3 *man/Yeast.Rd
 b141d95edc8db9110830ccaa4566cc69 *man/ZeaMays.Rd

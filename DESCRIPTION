@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.8-0
-Date: 2016-12-07
+Version: 0.8-1
+Date: 2016-12-22
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
@@ -12,10 +12,10 @@ Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The 'HistData' package provides a collection of small data sets
-    that are interesting and important in the history of statistics and data visualization.
-    The goal of the package is to make these available, both for instructional use
-    and for historical research.  Some of these present interesting challenges for graphics
-    or analysis in R.
+    that are interesting and important in the history of statistics and data
+    visualization. The goal of the package is to make these available, both for
+    instructional use and for historical research. Some of these present interesting
+    challenges for graphics or analysis in R.
 Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape,
         plyr, lattice, jpeg, car, gplots, sp, heplots, knitr,
         rmarkdown, effects, lubridate
@@ -23,6 +23,7 @@ License: GPL
 LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1
 Author: Michael Friendly [aut, cre],
   Stephane Dray [ctb],
   Hadley Wickham [ctb],
@@ -31,9 +32,9 @@ Author: Michael Friendly [aut, cre],
   Peter Li [ctb]
 Repository: CRAN
 Repository/R-Forge/Project: histdata
-Repository/R-Forge/Revision: 102
-Repository/R-Forge/DateTimeStamp: 2016-12-13 17:01:31
-Date/Publication: 2016-12-17 22:43:22
+Repository/R-Forge/Revision: 113
+Repository/R-Forge/DateTimeStamp: 2017-01-09 14:13:05
+Date/Publication: 2017-01-09 17:11:28
 NeedsCompilation: no
-Packaged: 2016-12-14 12:25:34 UTC; rforge
+Packaged: 2017-01-09 14:26:39 UTC; rforge
 Depends: R (>= 2.10)
