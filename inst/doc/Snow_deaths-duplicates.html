@@ -12,7 +12,7 @@
 
 <meta name="author" content="Peter Li" />
 
-<meta name="date" content="2017-08-16" />
+<meta name="date" content="2018-04-04" />
 
 <title>Duplicate and Missing Cases in Snow.deaths</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Duplicate and Missing Cases in Snow.deaths</h1>
 <h4 class="author"><em>Peter Li</em></h4>
-<h4 class="date"><em>2017-08-16</em></h4>
+<h4 class="date"><em>2018-04-04</em></h4>
 
 
 
@@ -79,8 +79,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 duplicates &lt;-<span class="st"> </span>Snow.deaths[(<span class="kw">duplicated</span>(Snow.deaths[, <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;y&quot;</span>)])), ]
 
-duplicates.id &lt;-<span class="st"> </span><span class="kw">lapply</span>(duplicates$x, function(i) {
-   Snow.deaths[Snow.deaths$x ==<span class="st"> </span>i, <span class="st">&quot;case&quot;</span>]
+duplicates.id &lt;-<span class="st"> </span><span class="kw">lapply</span>(duplicates<span class="op">$</span>x, <span class="cf">function</span>(i) {
+   Snow.deaths[Snow.deaths<span class="op">$</span>x <span class="op">==</span><span class="st"> </span>i, <span class="st">&quot;case&quot;</span>]
 })
 
 Snow.deaths[<span class="kw">unlist</span>(duplicates.id), ]
@@ -109,22 +109,22 @@ Snow.deaths2[<span class="kw">c</span>(<span class="dv">91</span>, <span class="
 <p>As a potential solution, one could use the three duplicates to fill in for the three “missing” observations in Snow.data. What makes this solution plausible is that the <code>Snow.deaths</code> data are used primarily as a way to visually replicate Snow’s map. This means that, with the exception of cases that represent “addresses” (i.e., cases directly adjacent to a street), the coordinate locations of other points are not as important: they do not represent the location of cases; they are simply a way to visually “stack” cases at an address. So moving duplicate points to fill in for missing observations should not be objectionable.</p>
 <p>To find a reasonable solution that is more systematic and less arbitrary, one could use simple geometric interpolation. Using one of the observed cases as a point of reference, possible locations will be found along the line that is orthogonal to the street (i.e., -1 / slope of street segment) and passes through that reference point. The specific location along the orthogonal will be a function of the Euclidean distance between observed points. For example, to put a point between two observed points, locate it on the orthogonal line at half the distance from the reference point; to put a point just beyond two observed points, use 1.5 times the distance. (In practice, the orthogonal lines for different observed points at a given address are not identical: they have the same slope but different intercepts. However, for the cases in question, the difference between these intercepts is very small and the orthogonal lines are visually indistinguishable).</p>
 <p>Essentially, this means finding the coordinates of the point of intersection between a circle, whose radius represents the desired multiple of the Euclidean distance between observed points, and a line which posses through the center of the circle, which represent the point of reference. Doing so boils down to solving a quadratic equation. The two formulas below were used to compute the solution.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">quadratic &lt;-<span class="st"> </span>function(a, b, c) {
-  root1 &lt;-<span class="st"> </span>(-b +<span class="st"> </span><span class="kw">sqrt</span>(b^<span class="dv">2</span> -<span class="st"> </span><span class="dv">4</span> *<span class="st"> </span>a *<span class="st"> </span>c)) /<span class="st"> </span>(<span class="dv">2</span> *<span class="st"> </span>a)
-  root2 &lt;-<span class="st"> </span>(-b -<span class="st"> </span><span class="kw">sqrt</span>(b^<span class="dv">2</span> -<span class="st"> </span><span class="dv">4</span> *<span class="st"> </span>a *<span class="st"> </span>c)) /<span class="st"> </span>(<span class="dv">2</span> *<span class="st"> </span>a)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">quadratic &lt;-<span class="st"> </span><span class="cf">function</span>(a, b, c) {
+  root1 &lt;-<span class="st"> </span>(<span class="op">-</span>b <span class="op">+</span><span class="st"> </span><span class="kw">sqrt</span>(b<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a <span class="op">*</span><span class="st"> </span>c)) <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>a)
+  root2 &lt;-<span class="st"> </span>(<span class="op">-</span>b <span class="op">-</span><span class="st"> </span><span class="kw">sqrt</span>(b<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a <span class="op">*</span><span class="st"> </span>c)) <span class="op">/</span><span class="st"> </span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>a)
   <span class="kw">c</span>(root1, root2)
 }
 
-interpolatedPoints &lt;-<span class="st"> </span>function(case, <span class="dt">radius.multiplier =</span> <span class="fl">0.5</span>, orthogonal.intercept) {
+interpolatedPoints &lt;-<span class="st"> </span><span class="cf">function</span>(case, <span class="dt">radius.multiplier =</span> <span class="fl">0.5</span>, orthogonal.intercept) {
   p &lt;-<span class="st"> </span>Snow.deaths[case, <span class="st">&quot;x&quot;</span>]
   q &lt;-<span class="st"> </span>Snow.deaths[case, <span class="st">&quot;y&quot;</span>]
   <span class="co"># extant.point.distance is the Euclidean distance between observed points</span>
-  r &lt;-<span class="st"> </span>radius.multiplier *<span class="st"> </span>extant.point.distance
+  r &lt;-<span class="st"> </span>radius.multiplier <span class="op">*</span><span class="st"> </span>extant.point.distance
   m &lt;-<span class="st"> </span>orthogonal.slope
   b &lt;-<span class="st"> </span>orthogonal.intercept
-  A &lt;-<span class="st"> </span>(m^<span class="dv">2</span> +<span class="st"> </span><span class="dv">1</span>)
-  B &lt;-<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>(m *<span class="st"> </span>b -<span class="st"> </span>m *<span class="st"> </span>q -<span class="st"> </span>p)
-  C &lt;-<span class="st"> </span>(q^<span class="dv">2</span> -<span class="st"> </span>r^<span class="dv">2</span> +<span class="st"> </span>p^<span class="dv">2</span> -<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>b *<span class="st"> </span>q +<span class="st"> </span>b^<span class="dv">2</span>)
+  A &lt;-<span class="st"> </span>(m<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)
+  B &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>(m <span class="op">*</span><span class="st"> </span>b <span class="op">-</span><span class="st"> </span>m <span class="op">*</span><span class="st"> </span>q <span class="op">-</span><span class="st"> </span>p)
+  C &lt;-<span class="st"> </span>(q<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span>r<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>p<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>b <span class="op">*</span><span class="st"> </span>q <span class="op">+</span><span class="st"> </span>b<span class="op">^</span><span class="dv">2</span>)
   <span class="kw">quadratic</span>(A, B, C) 
 }</code></pre></div>
 <p>Using these equations and the procedure described above, I get the following results. For the two missing cases at 40 Broad Street:</p>
