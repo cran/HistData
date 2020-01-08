@@ -26,7 +26,7 @@ The data are recorded in class intervals of width 1.0 in. He used non-integer
 values for the center of each class interval because of the strong bias toward
 integral inches.
 
-All of the heights of female children were multiplied by 1.08  before tablulation
+All of the heights of female children were multiplied by 1.08  before tabulation
 to compensate for sex differences.  See Hanley (2004) for a reanalysis of
 Galton's raw data questioning whether this was appropriate.
 }
@@ -59,7 +59,7 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 \seealso{
   \code{link{GaltonFamilies}},
 	\code{\link{PearsonLee}},
-	\code{\link[psych:galton]{galton}}
+	\code{galton} in the \pkg{psych} % \code{\link[psych]{galton}} 
 	}
 
 \examples{

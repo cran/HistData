@@ -1,8 +1,8 @@
-## ---- echo = FALSE, message = FALSE--------------------------------------
+## ---- echo = FALSE, message = FALSE-------------------------------------------
 knitr::opts_chunk$set(collapse = T, comment = "#>")
 
 
-## ---- warning=FALSE------------------------------------------------------
+## ---- warning=FALSE-----------------------------------------------------------
 library(HistData)
 
 duplicates <- Snow.deaths[(duplicated(Snow.deaths[, c("x", "y")])), ]
@@ -13,7 +13,7 @@ duplicates.id <- lapply(duplicates$x, function(i) {
 
 Snow.deaths[unlist(duplicates.id), ]
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 Snow.deaths2 <- Snow.deaths
 
 fix <- data.frame(x = c(12.56974, 12.53617, 12.33145), y = c(11.51226, 11.58107, 14.80316)) 
@@ -21,7 +21,7 @@ fix <- data.frame(x = c(12.56974, 12.53617, 12.33145), y = c(11.51226, 11.58107,
 Snow.deaths2[c(91, 93, 209), c("x", "y")] <- fix
 
 
-## ---- fig.width = 7, fig.height = 7, echo = FALSE------------------------
+## ---- fig.width = 7, fig.height = 7, echo = FALSE-----------------------------
 street.list <- split(Snow.streets[, c("x", "y")], 
   as.factor(Snow.streets$street))
 
@@ -56,7 +56,7 @@ legend(x = "bottomleft",
        cex = 0.8,
        title = "Key")
 
-## ---- fig.width = 7, fig.height = 7, echo = FALSE------------------------
+## ---- fig.width = 7, fig.height = 7, echo = FALSE-----------------------------
 
 broad.40 <- c(32, 122)
 
@@ -94,7 +94,7 @@ legend(x = "bottomleft",
        cex = 0.8,
        title = "Key")
 
-## ---- fig.width = 7, fig.height = 7, echo = FALSE------------------------
+## ---- fig.width = 7, fig.height = 7, echo = FALSE-----------------------------
 
 noel.street <- c(282, 422)
 
@@ -107,7 +107,7 @@ text(Snow.deaths[noel.street, c("x", "y")], cex = 0.9, pos = 4,
      labels = Snow.deaths$case[noel.street])
 title(main = "End of Noel Street:\nTwo Rather than Three Cases Listed")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 quadratic <- function(a, b, c) {
   root1 <- (-b + sqrt(b^2 - 4 * a * c)) / (2 * a)
   root2 <- (-b - sqrt(b^2 - 4 * a * c)) / (2 * a)
@@ -128,7 +128,7 @@ interpolatedPoints <- function(case, radius.multiplier = 0.5, orthogonal.interce
 }
 
 
-## ---- fig.width = 7, fig.height = 7, echo = FALSE------------------------
+## ---- fig.width = 7, fig.height = 7, echo = FALSE-----------------------------
 
 orthogonalIntercept <- function(case) {
   Snow.deaths[case, "y"] - orthogonal.slope * Snow.deaths[case, "x"]
@@ -233,7 +233,7 @@ legend(x = "bottomleft",
        title = "Key")
 
 
-## ---- fig.width = 7, fig.height = 7, echo = FALSE------------------------
+## ---- fig.width = 7, fig.height = 7, echo = FALSE-----------------------------
 
 noel.street <- c(282, 422)
 

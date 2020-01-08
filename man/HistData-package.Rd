@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.8-4\cr
-Date: \tab 2018-04-04\cr
+Version: \tab 0.8-6\cr
+Date: \tab 2020-01-06\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -66,7 +66,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Pyx}}}{Trial of the Pyx}
   \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
   \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
-  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the oribit of the twin star gamma Virginis}
+  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the orbit of the twin star gamma Virginis}
   \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
   \item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
   \item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
@@ -131,7 +131,8 @@ other data sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 for data from Rothkopf (1957) on errors in learning morse code, a classical
 example for MDS.
 
-The \pkg{psych} package, containing Galton's \code{\link[psych]{peas}} data.
+The \pkg{psych} package, containing Galton's \code{peas} data.
+% \code{\link[psych]{peas}} data.
 The same data set is contained in \pkg{alr3} as \code{\link[alr3]{galtonpeas}}.
 
 The \pkg{agridat} contains a large number of data sets of agricultural data,
