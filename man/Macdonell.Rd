@@ -54,8 +54,9 @@ each combination of \code{height} and \code{finger} replicated \code{frequency} 
 \source{
 Macdonell, W. R. (1902).
 On Criminal Anthropometry and the Identification of Criminals.
-\emph{Biometrika}, 1(2), 177-227. doi:10.1093/biomet/1.2.177
-\url{http://www.jstor.org/stable/2331487}
+\emph{Biometrika}, 1(2), 177-227. 
+\doi{10.1093/biomet/1.2.177}
+% \url{http://www.jstor.org/stable/2331487}
 
 The data used here were obtained from:
 
@@ -68,12 +69,12 @@ Macdonell data used by Student.
 \references{
 Hanley, J. and Julien, M. and Moodie, E. (2008).
 Student's z, t, and s: What if Gosset had R?
-\emph{The American Statistican}, 62(1), 64-69.
+\emph{The American Statistician}, 62(1), 64-69.
 
 Gosset, W. S. [Student] (1908).
 Probable error of a mean.
 \emph{Biometrika}, 6(1), 1-25.
-\url{http://www.york.ac.uk/depts/maths/histstat/student.pdf}
+\url{https://www.york.ac.uk/depts/maths/histstat/student.pdf}
 
 Gosset, W. S. [Student] (1908).
 Probable error of a correlation coefficient.
