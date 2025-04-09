@@ -50,16 +50,6 @@ data(Minard.temp)
   }
 
 }
-%\usage{data(Minard.cities)}
-%\format{
-%  A data frame with 20 observations on the following 3 variables giving the locations of
-%  various places along the path of Napoleon's army.
-%  \describe{
-%    \item{\code{long}}{Longitude}
-%    \item{\code{lat}}{Latitude}
-%    \item{\code{city}}{a factor with levels \code{Bobr} \code{Chjat} \code{Dorogobouge} \code{Gloubokoe} \code{Kowno} \code{Malo-Jarosewii} \code{Minsk} \code{Mohilow} \code{Moiodexno} \code{Mojaisk} \code{Moscou} \code{Orscha} \code{Polotzk} \code{Smolensk} \code{Smorgoni} \code{Studienska} \code{Tarantino} \code{Wilna} \code{Witebsk} \code{Wixma}}
-%  }
-%}
 
 %\usage{data(Minard.temp)}
 %\format{
@@ -76,7 +66,9 @@ data(Minard.temp)
 \code{date} in \code{Minard.temp} should be made a real date in 1815.
 }
 \source{
-\url{https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/minard.txt}
+Originally given by Lee Wilkinson, in a text file associated with 
+\emph{The Grammar of Graphics} (1990). Springer.
+
 }
 \references{
 Friendly, M. (2002). 
@@ -91,7 +83,6 @@ data(Minard.troops)
 data(Minard.cities)
 data(Minard.temp)
 
-\dontrun{
 #' ## Load required packages
 require(ggplot2)
 require(scales)
@@ -99,7 +90,7 @@ require(gridExtra)
 
 #' ## plot path of troops, and another layer for city names
  plot_troops <- ggplot(Minard.troops, aes(long, lat)) +
-		geom_path(aes(size = survivors, colour = direction, group = group),
+		geom_path(aes(linewidth = survivors, colour = direction, group = group),
                  lineend = "round", linejoin = "round")
  plot_cities <- geom_text(aes(label = city), size = 4, data = Minard.cities)
  
@@ -118,7 +109,9 @@ plot_minard <- plot_troops + plot_cities +
   ylab("Latitude") + 
   ggtitle("Napoleon's March on Moscow") +
   theme_bw() +
-  theme(legend.position=c(.8, .2), legend.box="horizontal")
+  theme(legend.position = "inside", 
+        legend.position.inside=c(.8, .2), 
+        legend.box="horizontal")
  
 #' ## plot temperature vs. longitude, with labels for dates
 plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
@@ -136,7 +129,6 @@ plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
 #' Combine the two plots into one
 grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
 
-}
 }
 
 \keyword{datasets}

@@ -127,6 +127,7 @@ The data in  these files were first digitized in 1992  by Rusty Dodson  of the N
 Santa  Barbara,  from the  map  included in  the  book by  John  Snow: "Snow  on
 Cholera...", London, Oxford University Press, 1936.  
 }
+
 \references{
 Koch, T. (2000). \emph{Cartographies of Disease: Maps, Mapping, and Medicine}.
 ESRI Press. 
@@ -143,13 +144,15 @@ cholera, 1854.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill.
-\url{https://www.ph.ucla.edu/epi/snow/snowbook.html}.
+Possibly at https://resource.nlm.nih.gov/0050707.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
 
 \seealso{
-\code{\link{SnowMap}}
+   \code{\link{SnowMap}} for code to draw Snow's map;
+   \code{\link{Cholera}} for William Farr's cholera data. 
+   The \pkg{cholera} package contains more analytical methods for understanding Snow's cholera data.
 }
 \examples{
 data(Snow.deaths)
@@ -161,8 +164,10 @@ data(Snow.deaths)
 ## Plot deaths over time
 require(lubridate)
 clr <- ifelse(Snow.dates$date < mdy("09/08/1854"), "red", "darkgreen")
-plot(deaths ~ date, data=Snow.dates, type="h", lwd=2, col=clr)
-points(deaths ~ date, data=Snow.dates, cex=0.5, pch=16, col=clr)
+plot(deaths ~ date, data=Snow.dates, 
+     type="h", lwd=2, col=clr)
+points(deaths ~ date, data=Snow.dates, 
+       cex=0.5, pch=16, col=clr)
 text( mdy("09/08/1854"), 40, "Pump handle\nremoved Sept. 8", pos=4)
 
 

@@ -1,3 +1,19 @@
+## Version 0.9-3
+
+This is a maintenance release, largely fixing CRAN check problems since the last public release, 0.9-1
+
+* add Pyx ggplot histogram
+* add seealso: cholera pkg for Snow
+* fix http -> https in README
+* fixed other moved / broken url links
+* Remove Rdatasets from Suggests b/c not on CRAN
+* Now Depends: R >= 4.1.0 for use of |> in examples
+
+## Version 0.9-2
+
+* now run Minard examples for documentation
+* renamed `Armada$Armada` -> `Armada$Fleet` and updated documentation.
+
 ## Version 0.9-1
 
 * Added `CholeraDeaths1849` [Thx: James Riley]
@@ -38,7 +54,7 @@
 
 ## Version 0.8-3 (2017-10-01)
 
-* Add clarifying note to Arbuhnot.Rd that the data are christenings, not births 
+* Add clarifying note to Arbuthnot.Rd that the data are christenings, not births 
   (thx: Jim Oeppen <joeppen@health.sdu.dk>)
 
 ## Version 0.8-2 (2017-02-10)
