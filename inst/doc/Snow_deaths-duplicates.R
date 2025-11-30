@@ -21,7 +21,7 @@ fix <- data.frame(x = c(12.56974, 12.53617, 12.33145), y = c(11.51226, 11.58107,
 Snow.deaths2[c(91, 93, 209), c("x", "y")] <- fix
 
 
-## ----fig.width = 7, fig.height = 7, echo = FALSE------------------------------
+## ----snow-deaths1, fig.width = 7, fig.height = 7, echo = FALSE----------------
 street.list <- split(Snow.streets[, c("x", "y")], 
   as.factor(Snow.streets$street))
 
@@ -56,7 +56,7 @@ legend(x = "bottomleft",
        cex = 0.8,
        title = "Key")
 
-## ----fig.width = 7, fig.height = 7, echo = FALSE------------------------------
+## ----snow-deaths2, fig.width = 7, fig.height = 7, echo = FALSE----------------
 
 broad.40 <- c(32, 122)
 
@@ -94,7 +94,7 @@ legend(x = "bottomleft",
        cex = 0.8,
        title = "Key")
 
-## ----fig.width = 7, fig.height = 7, echo = FALSE------------------------------
+## ----snow-deaths3, fig.width = 7, fig.height = 7, echo = FALSE----------------
 
 noel.street <- c(282, 422)
 
@@ -128,7 +128,7 @@ interpolatedPoints <- function(case, radius.multiplier = 0.5, orthogonal.interce
 }
 
 
-## ----fig.width = 7, fig.height = 7, echo = FALSE------------------------------
+## ----snow-deaths4, fig.width = 7, fig.height = 7, echo = FALSE----------------
 
 orthogonalIntercept <- function(case) {
   Snow.deaths[case, "y"] - orthogonal.slope * Snow.deaths[case, "x"]

@@ -1,20 +1,23 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.9-3
-Date: 2025-04-08
+Version: 1.0.0
+Date: 2025-11-25
 Authors@R: c(person(given = "Michael", family = "Friendly", 
                     role=c("aut", "cre"), 
                     comment = c(ORCID = "0000-0002-3237-0941"),
                     email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", 
-                   role="ctb", 
+                   role="aut", 
                    comment = c(ORCID = "0000-0003-0153-1105"),
                    email="stephane.dray@univ-lyon1.fr"),
+            person(given = "Peter", family = "Li", 
+                   role="aut", email="lindbrook@gmail.com",
+                   comment = c(ORCID = "0000-0001-9602-9550")),
+            person(given = "David", family = "Bellhouse", role="aut", email="bellhouse@stats.uwo.ca"),
             person(given = "Hadley", family = "Wickham", role="ctb", email="hadley@rstudio.com"),
             person(given = "James", family = "Hanley", role="ctb", email="james.hanley@mcgill.ca"),
             person(given = "Dennis", family = "Murphy", role="ctb", email = "djmuser@gmail.com"),
-            person(given = "Peter", family = "Li", role="ctb", email="lindbrook@gmail.com"),
             person(given = "Luiz", family = "Droubi", role="ctb", email="lfpdroubi@gmail.com"),
             person(given = "James", family = "Riley", role="ctb", email = "jimr1603@gmail.com"),
             person(given = "Antoine", family = "de Falguerolles", role="ctb"),
@@ -22,7 +25,8 @@ Authors@R: c(person(given = "Michael", family = "Friendly",
             person(given = "Neville", family = "Verlander", role="ctb", email="Neville.Verlander@phe.gov.uk"),
             person(given = "Brian", family = "Clair", role="ctb"),
             person(given = "Jim", family = "Oeppen", role="ctb", email = "joeppen@health.sdu.dk"),
-            person(given = "David", family = "Bellhouse", role="ctb", email="bellhouse@stats.uwo.ca")
+            person(given = "Ivan", family = "Lokhov", role="ctb", email="ivan@datawrapper.de"),
+            person(given = "John", family = "Russell", role="ctb", email="")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The 'HistData' package provides a collection of small data sets
@@ -40,18 +44,20 @@ LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
 Language: en-US
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 BugReports: https://github.com/friendly/HistData/issues
 URL: https://friendly.github.io/HistData/
 NeedsCompilation: no
-Packaged: 2025-04-09 14:09:50 UTC; friendly
-Author: Michael Friendly [aut, cre] (<https://orcid.org/0000-0002-3237-0941>),
-  Stephane Dray [ctb] (<https://orcid.org/0000-0003-0153-1105>),
+Packaged: 2025-11-30 16:34:49 UTC; friendly
+Author: Michael Friendly [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-3237-0941>),
+  Stephane Dray [aut] (ORCID: <https://orcid.org/0000-0003-0153-1105>),
+  Peter Li [aut] (ORCID: <https://orcid.org/0000-0001-9602-9550>),
+  David Bellhouse [aut],
   Hadley Wickham [ctb],
   James Hanley [ctb],
   Dennis Murphy [ctb],
-  Peter Li [ctb],
   Luiz Droubi [ctb],
   James Riley [ctb],
   Antoine de Falguerolles [ctb],
@@ -59,6 +65,7 @@ Author: Michael Friendly [aut, cre] (<https://orcid.org/0000-0002-3237-0941>),
   Neville Verlander [ctb],
   Brian Clair [ctb],
   Jim Oeppen [ctb],
-  David Bellhouse [ctb]
+  Ivan Lokhov [ctb],
+  John Russell [ctb]
 Repository: CRAN
-Date/Publication: 2025-04-09 14:40:02 UTC
+Date/Publication: 2025-11-30 17:20:02 UTC
